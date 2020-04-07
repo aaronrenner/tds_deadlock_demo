@@ -32,7 +32,7 @@ defmodule DemoMssqlWeb.ConnCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DemoMssql.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(DemoMssql.Repo, isolation_level: :snapshot)
 
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(DemoMssql.Repo, {:shared, self()})
