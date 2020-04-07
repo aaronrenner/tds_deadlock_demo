@@ -34,7 +34,11 @@ defmodule DemoMssql.MixProject do
   defp deps do
     [
       {:bcrypt_elixir, "~> 2.0"},
-      {:phx_gen_auth, path: "../..", only: [:dev, :test], runtime: false},
+      {:phx_gen_auth,
+       github: "aaronrenner/phx_gen_auth",
+       branch: "ar-mssql-async",
+       only: [:dev, :test],
+       runtime: false},
       {:phoenix, github: "phoenixframework/phoenix", override: true},
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
