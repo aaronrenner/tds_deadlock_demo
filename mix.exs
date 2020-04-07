@@ -33,6 +33,7 @@ defmodule DemoMssql.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:bcrypt_elixir, "~> 2.0"},
       {:phx_gen_auth, path: "../..", only: [:dev, :test], runtime: false},
       {:phoenix, github: "phoenixframework/phoenix", override: true},
       {:phoenix_ecto, "~> 4.1"},
